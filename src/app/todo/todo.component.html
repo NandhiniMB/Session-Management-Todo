@@ -1,0 +1,13 @@
+<ol>
+    <li *ngFor="let todo of todos" (click)=onClick(todo)>
+        <span>
+            {{todo.title}}
+        </span>
+    </li>
+   
+</ol>
+
+<div class="card" *ngIf="loadTodoDetail">
+    <li>Title : {{selectedTodo.title}}</li> 
+    <li>Completed: {{selectedTodo.completed}}</li> 
+  </div>

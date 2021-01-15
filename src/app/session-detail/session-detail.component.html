@@ -1,0 +1,21 @@
+<div class="content">
+    <p>Session:{{selectedSession.session_name}}</p>
+    <p>
+      Trainer: {{selectedSession.trainer_name}}
+    </p>
+    <p>
+      Date: {{selectedSession.date}}
+    </p>
+    
+    <button  class="btn" (click)="onEdit(selectedSession)">edit</button>
+    <button  class="dngrbtn" (click)="onDelete(selectedSession)">delete</button>
+</div>
+    <div class="content" *ngIf="loadEditComponent" >
+        <form class="form-inline" #f="ngForm" (ngSubmit)="editSession(f)" >
+            <input type="text" name="session_name" [(ngModel)]="selectedSession.session_name" placeholder="Session Name" default>
+            <input type="text" name="trainer_name" [(ngModel)]="selectedSession.trainer_name" placeholder="Trainer Name">
+            <input type="date" name="date" [(ngModel)]="selectedSession.date" placeholder="Date">
+            <button>Edit</button>
+        </form>
+       
+    </div>

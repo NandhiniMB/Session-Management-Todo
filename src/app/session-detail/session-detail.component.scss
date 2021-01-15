@@ -1,0 +1,59 @@
+.content {
+    display: flex;
+    margin: 1px 1px;
+    padding: 0 16px;
+    flex-direction: row;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    border-radius: 60%;
+  }
+  .dngrbtn{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    border-radius: 60%;
+  }
+
+  
+  .form-inline {
+    display: flex;
+    flex-flow:wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+
+  .form-inline button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+  }

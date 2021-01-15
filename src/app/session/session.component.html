@@ -1,0 +1,26 @@
+<form class="form-inline" #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <input type="text" name="session_name" ngModel #session_name="ngModel" placeholder="Session Name">
+    <input type="text" name="trainer_name" ngModel #trainer_name="ngModel" placeholder="Trainer Name">
+    <input type="date" name="date" ngModel placeholder="Date">
+    <button>ADD</button>
+</form>
+<!-- <input type="text" name="temp" [(ngModel)]="temp">
+<p>{{temp}}</p> -->
+
+<!-- <p>Session name value: {{ session_name.value }}</p>
+<p>Trainer name value: {{ trainer_name.value }}</p>
+<p>name valid: {{ session_name.valid }}</p>
+<p>Form value: {{ f.value | json }}</p>
+<p>Form valid: {{ f.valid }}</p> -->
+
+
+<div class="card-container">
+
+
+<app-session-list *ngFor="let session of sessions" 
+[session]="session"
+ (deleteSession)="deleteSession($event)" 
+ (editSession)=editSession($event)>
+</app-session-list>
+
+</div>

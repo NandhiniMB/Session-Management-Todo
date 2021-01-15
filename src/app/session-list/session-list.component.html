@@ -1,0 +1,9 @@
+<div class="card" (click)="loadSessionDetail(session)">
+        {{session.session_name}}
+</div>
+<span *ngIf="loadComponent" >
+    <!-- {{selectedSession.trainer_name}} -->
+    <app-session-detail [selectedSession]="selectedSession"
+     (editSelectedSession)="editSelectedSession($event)"
+      (deleteSelectedSession)="deleteSelectedSession($event)"></app-session-detail>
+</span>
